@@ -16,6 +16,9 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+    def __str__(self):
+        return self.name
+
 
 class Venue(models.Model):
     name = models.CharField(max_length=100)
@@ -49,4 +52,7 @@ class Venue(models.Model):
         )
 
     def __unicode__(self):
+        return self.name
+
+    def __str__(self):
         return self.name
