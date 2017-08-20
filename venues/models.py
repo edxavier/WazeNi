@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from geoposition.fields import GeopositionField
 # Create your models here.
 
 
@@ -25,9 +25,11 @@ class Venue(models.Model):
     secondary_names = models.TextField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     categories = models.ManyToManyField(Category)
+    position = GeopositionField()
     web = models.URLField(null=True, blank=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     schedules = models.TextField(null=True, blank=True)
+
 
     valet_parking = models.BooleanField(default=False)
     auto_service = models.BooleanField(default=False)

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="ui main  container">
+
+      <div class="ui floating message">
+        <h1 class="ui header">Puntos de interés turístico Waze</h1>
+        <p>Este es un sitio en donde podrás registrar todos los puntos que deseas que sean añadidos en la aplicación de Waze.
+            </p>
+          <p>Los editores a cargo, amablemente colaboraran para que los lugares que registres en esta pagina aparezcan
+mapeados en la aplicación.</p>
+        <a class="ui blue button">Registrar lugar »</a>
+      </div>
+
+
+      {% for venue in venues %}
+            <li>{{ venue.name }}</li>
+      {% empty %}
+            <li>Sorry, no athletes in this list.</li>
+      {% endfor %}
+  </div>
+
+
+
+{% endblock content %}
