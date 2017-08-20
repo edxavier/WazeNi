@@ -1,6 +1,5 @@
 dj-static==0.0.6
 Django==1.11.4
-django-geoposition==0.3.1
 gunicorn==19.7.1
 pytz==2017.2
 static3==0.7.0
