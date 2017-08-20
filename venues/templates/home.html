@@ -20,52 +20,76 @@ mapeados en la aplicación.</p>
         <a class="ui blue button">Registrar lugar »</a>
       </div>
 
-        <table class="ui inverted grey table">
-          <thead>
-            <tr><th>Nombre</th>
-            <th>Calories</th>
-            <th>Protein</th>
-          </tr></thead><tbody>
-            <tr>
-              <td>Apples</td>
-              <td>200</td>
-              <td>0g</td>
-            </tr>
-            <tr>
-              <td>Orange</td>
-              <td>310</td>
-              <td>0g</td>
-            </tr>
-          </tbody>
-        </table>
+
 
       {% for venue in venues %}
-            <li>{{ venue.name }}</li>
+      <div class="ui blue segment">
+        <h3 class="ui dividing header">
+            <i class="building icon"></i> {{ venue.name }}
+        </h3>
+        <a class="ui red tag label">Pendiente</a>
+          <table class="ui definition  table">
+              <tbody>
+               <tr>
+                  <td><i class="marker icon"></i> Coordenadas  </td>
+                  <td>{{ venue.position | default:"Sin Descripción"}}</td>
+                </tr>
+                <tr>
+                  <td><i class="sitemap icon"></i>  Categorias</td>
+                  <td>{% for cat in venue.categories.all %}
+                      <a class="ui grey label" style="margin-bottom: 4px">{{ cat.name }}</a>
+                      {% endfor %}
+                  </td>
+                </tr>
+               <tr>
+                  <td><i class="world icon"></i>Pagina web</td>
+                  <td>{{ venue.web | default:"No especificado"}}</td>
+                </tr>
+               <tr>
+                  <td><i class="call icon"></i>Telefono</td>
+                  <td>{{ venue.phone_number | default:"No especificado "}}</td>
+                </tr>
+               <tr>
+                  <td><i class="wait icon"></i>Horarios</td>
+                  <td>{{ venue.schedules | default:"No especificados "}}</td>
+                </tr>
+                <tr>
+                  <td><i class="sidebar icon"></i>Descripción</td>
+                  <td>{{ venue.description | default:"Sin Descripción"}}</td>
+                </tr>
+                <tr>
+                  <td><i class="building icon"></i>Nombres secundarios</td>
+                  <td>{{ venue.secondary_names | default:"No especificados "}}</td>
+                </tr>
+                <tr>
+                  <td><i class="building icon"></i>Servicios</td>
+                  <td>
+                      <a class="ui brown label" style="margin-bottom: 4px">Valet parking</a>
+                      <a class="ui brown label" style="margin-bottom: 4px">Auto servicio</a>
+                      <a class="ui brown label" style="margin-bottom: 4px">WiFi</a>
+                      <a class="ui brown label" style="margin-bottom: 4px">Baños</a>
+                      <a class="ui brown label" style="margin-bottom: 4px">Parqueo para clientes</a>
+
+                  </td>
+                </tr>
+            </tbody></table>
+       </div>
       {% empty %}
-            <li>Sorry, no athletes in this list.</li>
+            <li>No hay registros para mostrar.</li>
       {% endfor %}
 
-       <div class="ui center pagination menu">
-        <a class="icon item">
-          <i class="left chevron icon"></i>
-        </a>
+        <h5 class="ui horizontal divider header">
+          Pagina 1 de 3
+        </h5>
 
-        <a class="icon item">
+      <div class="ui right floated segment">
           <i class="right chevron icon"></i>
-        </a>
-      </div>
+        </p></div>
+        <div class="ui left floated segment">
+           <i class="left chevron icon"></i>
+        </div>
 
-      <div class="ui  menu">
-        <a class="icon item">
-          <i class="left chevron icon"></i>
-        </a>
 
-      <div class="right menu">
-        <a class="icon item">
-          <i class="right chevron icon"></i>
-        </a>
-      </div>
-    </div>
   </div>
 
 

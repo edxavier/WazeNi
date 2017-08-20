@@ -13,5 +13,5 @@ from .models import Venue, Category
 
 class Home(TemplateView):
     def get(self, request, *args, **kwargs):
-        venues = Category.objects.all().order_by('name')
+        venues = Venue.objects.all().order_by('name')
         return render(request, "home.html", locals())
