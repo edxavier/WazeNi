@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
-from django.views.generic import TemplateView
+from .forms import VenueCreateForm
+from django.views.generic import TemplateView, CreateView, UpdateView
 from django.shortcuts import render
 from django.template import RequestContext
 from .models import Venue, Category
@@ -13,5 +13,20 @@ from .models import Venue, Category
 
 class Home(TemplateView):
     def get(self, request, *args, **kwargs):
-        venues = Venue.objects.all().order_by('name')
+        venues = Venue.objects.all().order_by('mapped')
         return render(request, "home.html", locals())
+
+
+class CreateVenue(CreateView):
+    model = Venue
+    #fields = ['name', 'secondary_names', 'description', 'categories', 'position', 'phone_number', 'web', 'schedules']
+    success_url = '/'
+    form_class = VenueCreateForm
+    template_name = "create_venue.html"
+
+
+class UpdateVenue(UpdateView):
+    model = Venue
+    fields = ['mapped']
+    success_url = '/'
+    template_name = "mapped_venue.html"

@@ -30,20 +30,19 @@ class Venue(models.Model):
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     schedules = models.TextField(null=True, blank=True)
 
-
-    valet_parking = models.BooleanField(default=False)
-    auto_service = models.BooleanField(default=False)
-    wifi = models.BooleanField(default=False)
-    restrooms = models.BooleanField(default=False)
-    credit_cards = models.BooleanField(default=False)
-    reservations = models.BooleanField(default=False)
-    outdoor_seats = models.BooleanField(default=False)
-    air_conditioning = models.BooleanField(default=False)
-    parking = models.BooleanField(default=False)
-    delivery = models.BooleanField(default=False)
-    to_take_away = models.BooleanField(default=False)
-    wheelchair_access = models.BooleanField(default=False)
-    mapped = models.BooleanField(default=False)
+    valet_parking = models.BooleanField(blank=True, default=False)
+    auto_service = models.BooleanField(blank=True, default=False)
+    wifi = models.BooleanField(blank=True, default=False)
+    restrooms = models.BooleanField(blank=True, default=False)
+    credit_cards = models.BooleanField(blank=True, default=False)
+    reservations = models.BooleanField(blank=True, default=False)
+    outdoor_seats = models.BooleanField(blank=True, default=False)
+    air_conditioning = models.BooleanField(blank=True, default=False)
+    parking = models.BooleanField(blank=True, default=False)
+    delivery = models.BooleanField(blank=True, default=False)
+    to_take_away = models.BooleanField(blank=True, default=False)
+    wheelchair_access = models.BooleanField(blank=True, default=False)
+    mapped = models.BooleanField(blank=True, default=False)
 
     class Meta:
         verbose_name_plural = 'Puntos'
@@ -58,3 +57,7 @@ class Venue(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def get_position(self):
+        return str(self.position.longitude) + ' ' + str(self.position.latitude)

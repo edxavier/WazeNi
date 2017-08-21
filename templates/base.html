@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tests</title>
+    <title>Comunidad Waze Nicaragua</title>
     {% load static %}
 
       <link href="{% static 'semantic/dist/semantic.min.css' %}" rel="stylesheet" type="text/css">
+
+
+<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'semantic/dist/semantic.min.js' %}"></script>
+<script type="application/javascript">
+  $(document).ready(function() {
+    //$('.ui.dropdown').dropdown();
+    $('.ui.radio.checkbox').checkbox();
+    $('.select2').djangoSelect2({placeholder: 'Select an option'});
+  });
+</script>
 <style type="text/css">
   body {
     background-color: #FFFFFF;
@@ -23,6 +34,9 @@
     margin: 5em 0em 0em;
     padding: 5em 0em;
   }
+  select {
+    width: 300px;
+  }
   </style>
 </head>
 <body>
@@ -33,7 +47,7 @@
         <img class="logo" src="/static/img/wazeni.png">
         Comunidad Waze Nicaragua
       </a>
-      <a href="#" class="item">Home</a>
+      <a href="/" class="item">Home</a>
     </div>
   </div>
 
@@ -42,8 +56,5 @@
 {% endblock content %}
 
 </body>
-
-<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
-<script src="{% static 'semantic/dist/semantic.min.js' %}"></script>
 
 </html>

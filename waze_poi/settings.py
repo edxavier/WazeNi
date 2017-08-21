@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'venues',
     'geoposition',
+    'django_select2'
 ]
 
 MIDDLEWARE = [
@@ -142,8 +143,8 @@ GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyAU_HzPvASkStbyrc1cUWcHAVdSK316tlM'
 
 GEOPOSITION_MAP_OPTIONS = {
     'minZoom': 3,
-    'zoom': 8,
-    'center': {'lat': 12.591590927039016, 'lng': -85.34952163696289},
+    'zoom': 10,
+    'center': {'lat': 12.114019255171462, 'lng': -86.25589370727539},
 }
 
 GEOPOSITION_MARKER_OPTIONS = {

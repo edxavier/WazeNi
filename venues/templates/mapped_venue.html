@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="ui main container">
+
+      <div class="ui teal segment" >
+               <h4 class="ui dividing header">Actualizar estado del lugar</h4>
+
+          <form class="ui  form"  method="POST" action="">
+              {{ form.media }}
+              {% csrf_token %}
+                {% if form.errors %}
+                     <div class="ui visible error message" >
+                         {{ form.errors}}
+                     </div>
+                {% endif %}
+
+
+              <div class="ui grid">
+
+                   <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field">
+                          <label>Actualizar estado de lugar como mapeado</label>
+                          <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.mapped}}
+                              <label>Mapeado</label>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <br>
+
+              <button type="submit" class="ui green button">
+                  Actaulizar
+              </button>
+
+
+          </form>
+
+</div>
+  </div>
+{% endblock content %}

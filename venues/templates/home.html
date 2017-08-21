@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <div class="ui main  container">
+  <div class="ui main container">
 
       <div class="ui floating  message">
         <h1 class="ui header">
@@ -17,7 +17,7 @@
             </p>
           <p>Los editores a cargo, amablemente colaboraran para que los lugares que registres en esta pagina aparezcan
 mapeados en la aplicación.</p>
-        <a class="ui blue button">Registrar lugar »</a>
+        <a class="ui blue button" href="{% url 'create_venue' %}">Registrar lugar »</a>
       </div>
 
 
@@ -27,12 +27,17 @@ mapeados en la aplicación.</p>
         <h3 class="ui dividing header">
             <i class="building icon"></i> {{ venue.name }}
         </h3>
-        <a class="ui red tag label">Pendiente</a>
+
+          {% if venue.mapped  %}
+            <a class="ui green tag label">{{venue.mapped |yesno:"Mapeado, Pendiente" }}</a>
+          {% else  %}
+            <a class="ui red tag label">{{venue.mapped |yesno:"Mapeado, Pendiente" }}</a>
+          {% endif %}
           <table class="ui definition  table">
               <tbody>
                <tr>
                   <td><i class="marker icon"></i> Coordenadas  </td>
-                  <td>{{ venue.position | default:"Sin Descripción"}}</td>
+                  <td>{{ venue.get_position | default:"Sin Descripción"}}</td>
                 </tr>
                 <tr>
                   <td><i class="sitemap icon"></i>  Categorias</td>
@@ -64,15 +69,54 @@ mapeados en la aplicación.</p>
                 <tr>
                   <td><i class="building icon"></i>Servicios</td>
                   <td>
-                      <a class="ui brown label" style="margin-bottom: 4px">Valet parking</a>
-                      <a class="ui brown label" style="margin-bottom: 4px">Auto servicio</a>
-                      <a class="ui brown label" style="margin-bottom: 4px">WiFi</a>
-                      <a class="ui brown label" style="margin-bottom: 4px">Baños</a>
-                      <a class="ui brown label" style="margin-bottom: 4px">Parqueo para clientes</a>
+                      {% if venue.valet_parking  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Valet parking</a>
+                      {% endif %}
+                      {% if venue.wifi  %}
+                         <a class="ui brown label" style="margin-bottom: 4px">WiFi</a>
+                      {% endif %}
+                      {% if venue.restrooms  %}
+                         <a class="ui brown label" style="margin-bottom: 4px">Baños</a>
+                      {% endif %}
+                      {% if venue.parking  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Parqueo para clientes</a>
+                      {% endif %}
+                      {% if venue.auto_service  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Auto servicio</a>
+                      {% endif %}
+
+                       {% if venue.credit_cards  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Aceptan tarjetas</a>
+                      {% endif %}
+                       {% if venue.reservations  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Reservaciones</a>
+                      {% endif %}
+                       {% if venue.outdoor_seats  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Sillas al aire libre</a>
+                      {% endif %}
+                       {% if venue.air_conditioning  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Aire acondicionado</a>
+                      {% endif %}
+                       {% if venue.delivery  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Delivery</a>
+                      {% endif %}
+                       {% if venue.to_take_away  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Para llevar</a>
+                      {% endif %}
+                       {% if venue.wheelchair_access  %}
+                        <a class="ui brown label" style="margin-bottom: 4px">Acceso para sillas de ruedas</a>
+                      {% endif %}
+
+
+
 
                   </td>
                 </tr>
             </tbody></table>
+
+          {% if  user.is_superuser and not venue.mapped %}
+            <a class="ui blue button" href="{% url 'update_venue' venue.id %}">Establecer como mapeado</a>
+          {% endif %}
        </div>
       {% empty %}
             <li>No hay registros para mostrar.</li>

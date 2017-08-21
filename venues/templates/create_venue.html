@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="ui main container">
+
+      <div class="ui teal segment" >
+               <h4 class="ui dividing header">Informacion del lugar</h4>
+
+          <form class="ui  form"  method="POST" action="">
+              {{ form.media }}
+              {% csrf_token %}
+                {% if form.errors %}
+                     <div class="ui visible error message" >
+                         {{ form.errors}}
+                     </div>
+                {% endif %}
+
+
+              <div class="ui grid">
+                  <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field required">
+                          <label>Nombre</label>
+                          <div class="ui left icon input">
+                              {{ form.name }}
+                              <i class="building icon"></i>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="fifteen wide mobile eight wide computer eight wide tablet column">
+                      <div class="field ">
+                          <label>Web</label>
+                          <div class="ui left icon input">
+                            {{ form.web }}
+                                <i class="world icon"></i>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="fifteen wide mobile eight wide computer eight wide tablet column">
+                      <div class="field ">
+                          <label>Teléfono</label>
+                          <div class="ui left icon input">
+                              {{ form.phone_number }}
+                              <i class="call icon"></i>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field required">
+                          <label>Categorías</label>
+                          {{form.categories}}
+                      </div>
+                  </div>
+
+                  <div class="fifteen wide mobile eight wide computer eight wide tablet column">
+                      <div class="field">
+                          <label>Descripcion</label>
+                          <div class="ui left icon input">
+                             {{ form.description }}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="fifteen wide mobile eight wide computer eight wide tablet column">
+                      <div class="field">
+                          <label>Nombres secundarios</label>
+                          <div class="ui left icon input">
+                             {{ form.secondary_names }}
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="fifteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field">
+                          <label>Ubicación</label>
+                            {{form.position}}
+                      </div>
+                  </div>
+                   <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field">
+                          <label>Servicios</label>
+                          <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.valet_parking}}
+                              <label>Valet parking</label>
+                          </div>
+                          <br>
+                           <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.auto_service}}
+                              <label>Auto servicio</label>
+                          </div>
+                          <br>
+                           <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.wifi}}
+                              <label>Wifi</label>
+                          </div>
+                           <br><div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.restrooms}}
+                              <label>Baños</label>
+                          </div>
+                          <br> <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.credit_cards}}
+                              <label>Acepta tarjetas</label>
+                          </div>
+                           <br><div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.reservations}}
+                              <label>Reservaciones</label>
+                          </div>
+                          <br> <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.outdoor_seats}}
+                              <label>Sillas al aire libre</label>
+                          </div>
+                          <br> <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.air_conditioning}}
+                              <label>Aire acondicionado</label>
+                          </div>
+                           <br><div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.parking}}
+                              <label>Estacionamiento para clientes</label>
+                          </div>
+                          <br> <div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.delivery}}
+                              <label>Delivery</label>
+                          </div>
+                           <br><div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.to_take_away}}
+                              <label>Para llevar</label>
+                          </div>
+                          <br><div class="ui toggle checkbox" style="margin: 5px">
+                              {{form.to_take_away}}
+                              <label>Acceso para sillas de ruedas</label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <br>
+
+              <button type="submit" class="ui green button">
+                  Guardar
+              </button>
+
+
+          </form>
+
+</div>
+  </div>
+{% endblock content %}
