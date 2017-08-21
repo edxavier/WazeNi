@@ -5,3 +5,4 @@ pytz==2017.2
 static3==0.7.0
 whitenoise==3.3.0
 https://github.com/philippbosch/django-geoposition/archive/django-1.11.zip
+Django-Select2==5.11.1
