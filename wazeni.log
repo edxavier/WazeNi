@@ -242,3 +242,66 @@ Traceback (most recent call last):
   File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader.py", line 53, in select_template
     raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
 TemplateDoesNotExist: venues/venue_list.html
+Internal Server Error: /venue/new
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 1046, in render
+    return render_value_in_context(output, context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 1024, in render_value_in_context
+    value = force_text(value)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/utils/encoding.py", line 78, in force_text
+    s = six.text_type(s)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/utils/html.py", line 376, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/widgets.py", line 60, in __str__
+    return self.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/widgets.py", line 63, in render
+    return mark_safe('\n'.join(chain(*[getattr(self, 'render_' + name)() for name in MEDIA_TYPES])))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/widgets.py", line 70, in render_js
+    ) for path in self._js
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/widgets.py", line 92, in absolute_path
+    return static(path)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/templatetags/static.py", line 166, in static
+    return StaticNode.handle_simple(path)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/templatetags/static.py", line 117, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 162, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 141, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 432, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'django_select2/django_select2.js'
