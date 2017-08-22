@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b06dcf3-6625-4fe9-b03a-e92096fb5459" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/staticfiles.json" afterPath="$PROJECT_DIR$/static/staticfiles.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wazeni.log" afterPath="$PROJECT_DIR$/wazeni.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/templates/home.html" afterPath="$PROJECT_DIR$/venues/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/views.py" afterPath="$PROJECT_DIR$/venues/views.py" />
     </list>
     <ignored path="waze_poi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +30,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -38,7 +40,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venues/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="738">
               <caret line="44" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="10" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
@@ -50,8 +52,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+            <state relative-caret-position="216">
+              <caret line="37" column="61" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -60,8 +62,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venues/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -72,41 +74,11 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venues/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapped_venue.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venues/templates/mapped_venue.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_venue.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venues/templates/create_venue.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="142" column="23" selection-start-line="140" selection-start-column="13" selection-end-line="142" selection-end-column="23" />
+            <state relative-caret-position="108">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="20" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#11;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#h3#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -135,9 +107,9 @@
         <option value="$PROJECT_DIR$/venues/templates/create_venue.html" />
         <option value="$PROJECT_DIR$/waze_poi/urls.py" />
         <option value="$PROJECT_DIR$/venues/templates/mapped_venue.html" />
+        <option value="$PROJECT_DIR$/venues/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/venues/templates/home.html" />
-        <option value="$PROJECT_DIR$/venues/views.py" />
         <option value="$PROJECT_DIR$/waze_poi/settings.py" />
       </list>
     </option>
@@ -177,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,6 +244,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,6 +345,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -513,7 +491,7 @@
     <frame x="0" y="0" width="1366" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19545455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19848485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -551,6 +529,82 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="10" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+          <folding>
+            <element signature="n#h3#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/templates/mapped_venue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/templates/create_venue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2556">
+          <caret line="142" column="23" selection-start-line="140" selection-start-column="13" selection-end-line="142" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#11;n#div#0;n#div#7;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding />
@@ -561,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,9 +664,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#1;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#h3#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,19 +698,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venues/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="738">
           <caret line="44" column="10" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="10" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waze_poi/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="24" column="77" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/templates/mapped_venue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -685,52 +747,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waze_poi/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="24" column="77" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venues/templates/mapped_venue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venues/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venues/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="124">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" column="61" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venues/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="n#h3#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="450">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>

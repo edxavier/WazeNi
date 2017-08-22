@@ -12,7 +12,7 @@ from .models import Venue, Category
 
 
 class Home(ListView):
-    paginate_by = 10
+    paginate_by = 2
     model = Venue
     template_name = 'home.html'
     context_object_name = 'venues'
