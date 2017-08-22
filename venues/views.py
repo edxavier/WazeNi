@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from .forms import VenueCreateForm
-from django.views.generic import TemplateView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.shortcuts import render
 from django.template import RequestContext
 from .models import Venue, Category
@@ -11,10 +11,17 @@ from .models import Venue, Category
 # Create your views here.
 
 
-class Home(TemplateView):
+class Home(ListView):
+    paginate_by = 10
+    model = Venue
+    template_name = 'home.html'
+    context_object_name = 'venues'
+    queryset = Venue.objects.all().order_by('mapped')
+    """
     def get(self, request, *args, **kwargs):
         venues = Venue.objects.all().order_by('mapped')
         return render(request, "home.html", locals())
+    """
 
 
 class CreateVenue(CreateView):
