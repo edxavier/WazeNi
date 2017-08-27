@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b06dcf3-6625-4fe9-b03a-e92096fb5459" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venues/pipelines.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venues/templates/my_venues.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venues/templates/resume.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venues/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venues/migrations/0002_auto_20170819_1757.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venues/migrations/0003_auto_20170819_1758.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venues/migrations/0004_venue_secondary_names.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venues/migrations/0005_venue_position.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/admin.py" afterPath="$PROJECT_DIR$/venues/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/forms.py" afterPath="$PROJECT_DIR$/venues/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/models.py" afterPath="$PROJECT_DIR$/venues/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/templates/create_venue.html" afterPath="$PROJECT_DIR$/venues/templates/create_venue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/templates/home.html" afterPath="$PROJECT_DIR$/venues/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/templates/mapped_venue.html" afterPath="$PROJECT_DIR$/venues/templates/mapped_venue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/venues/views.py" afterPath="$PROJECT_DIR$/venues/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waze_poi/settings.py" afterPath="$PROJECT_DIR$/waze_poi/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waze_poi/urls.py" afterPath="$PROJECT_DIR$/waze_poi/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wazeni.log" afterPath="$PROJECT_DIR$/wazeni.log" />
     </list>
     <ignored path="waze_poi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="122" column="28" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+            <state relative-caret-position="450">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -66,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -140,7 +120,6 @@
       <list>
         <option value="$PROJECT_DIR$/waze_poi/wsgi.py" />
         <option value="$PROJECT_DIR$/venues/admin.py" />
-        <option value="$PROJECT_DIR$/waze_poi/settings.py" />
         <option value="$PROJECT_DIR$/venues/pipelines.py" />
         <option value="$PROJECT_DIR$/venues/forms.py" />
         <option value="$PROJECT_DIR$/venues/templates/create_venue.html" />
@@ -152,6 +131,7 @@
         <option value="$PROJECT_DIR$/venues/views.py" />
         <option value="$PROJECT_DIR$/venues/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/waze_poi/settings.py" />
       </list>
     </option>
   </component>
@@ -834,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="122" column="28" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venues/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -940,6 +912,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waze_poi/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>
