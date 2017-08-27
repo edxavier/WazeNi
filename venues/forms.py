@@ -11,9 +11,10 @@ class VenueCreateForm(forms.ModelForm):
                   'position', 'phone_number', 'web', 'schedules', 'valet_parking',
                   'auto_service', 'wifi', 'restrooms', 'credit_cards', 'reservations',
                   'outdoor_seats', 'air_conditioning', 'parking', 'delivery', 'to_take_away',
-                  'wheelchair_access']
+                  'wheelchair_access', 'created_by']
         widgets = {
             'categories': Select2MultipleWidget(),
+            'schedules': forms.Textarea(attrs={'rows': "3", 'placeholder': 'Ej.: Lun-Vie 07:00 am - 10:00 pm'}),
             'description': forms.Textarea(attrs={'rows': "3"}),
             'secondary_names': forms.Textarea(attrs={'rows': "3"}),
         }

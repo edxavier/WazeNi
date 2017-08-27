@@ -21,15 +21,18 @@
 
                    <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
                       <div class="field">
-                          <label>Actualizar estado de lugar como mapeado</label>
-                          <div class="ui toggle checkbox" style="margin: 5px">
-                              {{form.mapped}}
-                              <label>Mapeado</label>
-                          </div>
-
+                          <label>Actualizar estado de lugar:</label>
+                          {{form.status}}
+                      </div>
+                  </div>
+                     <div class="sixteen wide mobile sixteen wide computer sixteen wide tablet column">
+                      <div class="field">
+                          <label>Describe por que deniegas un lugar de lo contrario deja el campo vacío:</label>
+                          {{form.status_desc}}
                       </div>
                   </div>
               </div>
+                      <input hidden  name="mapped_by" id="id_mapped_by" value="{{user.id}}">
 
               <br>
 

@@ -494,3 +494,1734 @@ Traceback (most recent call last):
   File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 432, in stored_name
     raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
 ValueError: Missing staticfiles manifest entry for 'django_select2/django_select2.js'
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 242, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 213, in inner
+    if not self.has_permission(request):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 187, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/utils/functional.py", line 238, in inner
+    self._setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/utils/functional.py", line 386, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 217, in get_user
+    user = backend.get_user(user_id)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 189, in get_user
+    return self.strategy.get_user(user_id)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/strategy.py", line 56, in get_user
+    return self.storage.user.get_user(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/storage.py", line 91, in get_user
+    return cls.user_model().objects.get(**kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 374, in get
+    num = len(clone)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: no such table: venues_user
+Internal Server Error: /login/fedora/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 37, in start
+    return self.strategy.html(self.auth_html())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 146, in auth_html
+    openid_request = self.setup_request(self.auth_extra_arguments())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 191, in setup_request
+    request = self.openid_request(params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 251, in openid_request
+    err
+AuthException: OpenID discovery error: Error fetching XRDS document: <urlopen error [Errno -3] Temporary failure in name resolution>
+Internal Server Error: /login/fedora/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 47, in wrapper
+    backend, uri)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 28, in load_backend
+    Backend = get_backend(BACKENDS, name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/utils.py", line 53, in get_backend
+    load_backends(backends, force_load=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/utils.py", line 35, in load_backends
+    backend = module_member(auth_backend)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 59, in module_member
+    return getattr(module, member)
+AttributeError: 'module' object has no attribute 'Linkedin'
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 183, in auth_complete
+    return self.do_auth(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 194, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/strategy.py", line 115, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 115, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 80, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 83, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 108, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/home/edx/waze_poi/venues/pipelines.py", line 19, in get_avatar
+    url = response.get['pictureUrl']
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 183, in auth_complete
+    return self.do_auth(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 194, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/strategy.py", line 115, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 115, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 80, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 83, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 108, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/home/edx/waze_poi/venues/pipelines.py", line 19, in get_avatar
+    url = kwargs['response'].get['pictureUrl']
+KeyError: 'response'
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /login/google/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 34, in start
+    if self.uses_redirect():
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 242, in uses_redirect
+    return self.openid_request().shouldSendRedirect()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 251, in openid_request
+    err
+AuthException: OpenID discovery error: HTTP Response status from identity URL host is not 200. Got status 404
+Internal Server Error: /login/google/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 34, in start
+    if self.uses_redirect():
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 242, in uses_redirect
+    return self.openid_request().shouldSendRedirect()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 251, in openid_request
+    err
+AuthException: OpenID discovery error: HTTP Response status from identity URL host is not 200. Got status 404
+Internal Server Error: /login/google/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 34, in start
+    if self.uses_redirect():
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 242, in uses_redirect
+    return self.openid_request().shouldSendRedirect()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/open_id.py", line 251, in openid_request
+    err
+AuthException: OpenID discovery error: Error fetching XRDS document: <urlopen error [Errno -3] Temporary failure in name resolution>
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 183, in auth_complete
+    return self.do_auth(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 194, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/strategy.py", line 115, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 115, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 80, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 83, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 108, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/home/edx/waze_poi/venues/pipelines.py", line 20, in get_avatar
+    if kwargs['response'].get('picture-url'):
+KeyError: 'response'
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 182, in auth_complete
+    access_token = self.access_token(token)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 304, in access_token
+    method=self.ACCESS_TOKEN_METHOD)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 236, in get_querystring
+    return parse_qs(self.request(url, *args, **kwargs).text)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 228, in request
+    raise AuthFailed(self, str(err))
+AuthFailed: Authentication failed: HTTPSConnectionPool(host='api.linkedin.com', port=443): Max retries exceeded with url: /uas/oauth/accessToken (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fbd89bf1310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 257, in wrapper
+    raise AuthForbidden(args[0])
+AuthForbidden: Your credentials aren't allowed
+Internal Server Error: /complete/linkedin-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 394, in auth_complete
+    method=self.ACCESS_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/linkedin.py", line 96, in request_access_token
+    *args, **kwargs
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 372, in request_access_token
+    return self.get_json(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 228, in request
+    raise AuthFailed(self, str(err))
+AuthFailed: Authentication failed: HTTPSConnectionPool(host='www.linkedin.com', port=443): Max retries exceeded with url: /uas/oauth2/accessToken?code=AQR_rlYkXtQO4UK6LgAHn3hjbFa3YCMZ7y3AW--Y0icPWKxl8Zm_ODGCt2FWYvCf-pqGoEbJGR0MpN2CPwni8MwbaRs_9iOINgrK83DpO_IwX6IRw0t37LWTY36Cux3GS2iDaPczxeGO-05o6JVcRfGVgW_8iA&client_secret=Nk6HzVrspLgIiB3K&grant_type=authorization_code&client_id=78pcxpvhgsrpnq&redirect_uri=http%3A%2F%2Fwazeni.com%3A8000%2Fcomplete%2Flinkedin-oauth2%2F (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f2f470c14d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+Internal Server Error: /complete/linkedin-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 394, in auth_complete
+    method=self.ACCESS_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/linkedin.py", line 96, in request_access_token
+    *args, **kwargs
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 372, in request_access_token
+    return self.get_json(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 228, in request
+    raise AuthFailed(self, str(err))
+AuthFailed: Authentication failed: HTTPSConnectionPool(host='www.linkedin.com', port=443): Max retries exceeded with url: /uas/oauth2/accessToken?code=AQR_rlYkXtQO4UK6LgAHn3hjbFa3YCMZ7y3AW--Y0icPWKxl8Zm_ODGCt2FWYvCf-pqGoEbJGR0MpN2CPwni8MwbaRs_9iOINgrK83DpO_IwX6IRw0t37LWTY36Cux3GS2iDaPczxeGO-05o6JVcRfGVgW_8iA&client_secret=Nk6HzVrspLgIiB3K&grant_type=authorization_code&client_id=78pcxpvhgsrpnq&redirect_uri=http%3A%2F%2Fwazeni.com%3A8000%2Fcomplete%2Flinkedin-oauth2%2F (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f2f42e9dc50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+Internal Server Error: /complete/google-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 394, in auth_complete
+    method=self.ACCESS_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 372, in request_access_token
+    return self.get_json(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 228, in request
+    raise AuthFailed(self, str(err))
+AuthFailed: Authentication failed: HTTPSConnectionPool(host='accounts.google.com', port=443): Max retries exceeded with url: /o/oauth2/token (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f7938aeb750>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+Internal Server Error: /complete/google-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 398, in auth_complete
+    *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 403, in do_auth
+    data = self.user_data(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/google.py", line 59, in user_data
+    'alt': 'json'
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 403 Client Error: Forbidden for url: https://www.googleapis.com/plus/v1/people/me?access_token=ya29.Glu0BO8uLxoVxZYo5tqdq7JNlKZiPAAdH4XfSaS9ifiU6pG4gEzgNqWjaOrGQuX2NNVTR_LsahZxgGAocJ1kPFyYccE0g4Rpzbj_iS5BVdrTJ6izx4r11FFYjAFY&alt=json
+Internal Server Error: /complete/google-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 398, in auth_complete
+    *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 403, in do_auth
+    data = self.user_data(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/google.py", line 59, in user_data
+    'alt': 'json'
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 403 Client Error: Forbidden for url: https://www.googleapis.com/plus/v1/people/me?access_token=ya29.Glu0BIsRWM1kLuu7WY003UhJRqRG3XdxKK31yu6NRfIzncEV55H7rqr_t2XC01nl7BVijJkMOmR6WuYuAfJcH-5jnXkz6gcEoMoAdTXVPsA_ae2OYL2oR5tmYRmB&alt=json
+Internal Server Error: /complete/google-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 398, in auth_complete
+    *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 403, in do_auth
+    data = self.user_data(access_token, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/google.py", line 59, in user_data
+    'alt': 'json'
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 403 Client Error: Forbidden for url: https://www.googleapis.com/plus/v1/people/me?access_token=ya29.Glu0BBeGNogvwS-p5zoPPNvVGA8_XKKqAeHwe66GjA0yA_H9huFG2B9qFlY_9GVEeO3oAeNDmjXyTYN0EsS78pbUi5MKZdTHMvoyxG1Kq8a7pl1V4xgX9hDLR647&alt=json
+Internal Server Error: /complete/google-oauth2/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 255, in wrapper
+    raise AuthCanceled(args[0], response=err.response)
+AuthCanceled: Authentication process canceled
+Internal Server Error: /complete/facebook/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 252, in wrapper
+    return func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/facebook.py", line 110, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/facebook.py", line 130, in do_auth
+    data = self.user_data(access_token)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/facebook.py", line 80, in user_data
+    params=params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 233, in get_json
+    return self.request(url, *args, **kwargs).json()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 228, in request
+    raise AuthFailed(self, str(err))
+AuthFailed: Authentication failed: HTTPSConnectionPool(host='graph.facebook.com', port=443): Max retries exceeded with url: /v2.10/me?access_token=EAAEsKhRZBQRcBALGB08lhLn4CewJa2dHW0ya84Q3YEEVgayqugBe6wDCGbOZBmwJ17Qr0yLzZAXv6agEwy39SC0WplaRcQZAjhoHTjKn9YMOdbko0fxNtLS819uyRk3zzeZCx2RSmARgETGA4pZBSrClGOuqzn8yA9pxM8U5tFnwZDZD&fields=id%2C+name%2C+email&appsecret_proof=62852e75e603a4b6811a15f916e1c4335d775e12aa0075ba43418d1fd4ef330c (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f22d412a310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+Internal Server Error: /complete/facebook/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 255, in wrapper
+    raise AuthCanceled(args[0], response=err.response)
+AuthCanceled: Authentication process canceled
+Internal Server Error: /complete/facebook/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 32, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/utils.py", line 255, in wrapper
+    raise AuthCanceled(args[0], response=err.response)
+AuthCanceled: Authentication process canceled
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /login/twitter/
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_django/views.py", line 23, in auth
+    return do_auth(request.backend, redirect_name=REDIRECT_FIELD_NAME)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/actions.py", line 27, in do_auth
+    return backend.start()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 35, in start
+    return self.strategy.redirect(self.auth_url())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 166, in auth_url
+    token = self.set_unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 222, in set_unauthorized_token
+    token = self.unauthorized_token()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/oauth.py", line 246, in unauthorized_token
+    method=self.REQUEST_TOKEN_METHOD
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/social_core/backends/base.py", line 229, in request
+    response.raise_for_status()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+HTTPError: 401 Client Error: Authorization Required for url: https://api.twitter.com/oauth/request_token
+Internal Server Error: /venue/new
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/models.py", line 463, in save
+    self.instance.save()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 807, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 837, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 923, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 962, in _do_insert
+    using=using, raw=raw)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: venues_venue.created_by_id
+Internal Server Error: /venue/new
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/forms/models.py", line 463, in save
+    self.instance.save()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 807, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 837, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 923, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/base.py", line 962, in _do_insert
+    using=using, raw=raw)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: venues_venue.mapped_by_id
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'my_venues' with no arguments not found. 1 pattern(s) tried: ['my_venues^$']
+Internal Server Error: /my_venues
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() takes at least 3 arguments (2 given)
+Internal Server Error: /my_venues
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/edx/waze_poi/venues/views.py", line 35, in get
+    return render('my_venues.html', locals(), context_instance=RequestContext(request))
+TypeError: render() got an unexpected keyword argument 'context_instance'
+Internal Server Error: /resume
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/edx/waze_poi/venues/views.py", line 30, in get
+    mapped = Venue.objects.filter(mapped=True).couunt()
+AttributeError: 'QuerySet' object has no attribute 'couunt'
+Internal Server Error: /my_venues
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/edx/waze_poi/venues/views.py", line 47, in get
+    return render(request, "my_venues.html", locals())
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 871, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 423, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 298, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 601, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 634, in _setup_joins
+    pieces, opts, alias)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1417, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'mapped' into field. Choices are: air_conditioning, auto_service, categories, created_by, created_by_id, credit_cards, delivery, description, id, mapped_by, mapped_by_id, name, outdoor_seats, parking, phone_number, position, reservations, restrooms, schedules, secondary_names, status, status_desc, to_take_away, valet_parking, web, wheelchair_access, wifi
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 160: 'empty', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '==1' from 'venue.status==1'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loader.py", line 48, in select_template
+    return engine.get_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/edx/.virtualenvs/waze/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '(' from '('

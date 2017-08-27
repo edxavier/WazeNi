@@ -23,10 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wb*2ncku1&$r9iv6xet)cap=0*#)h!2vze&x5okzx)-1!@5p&^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+
+AUTH_USER_MODEL = 'venues.User'
 
 # Application definition
 
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'venues',
     'geoposition',
-    'django_select2'
+    'django_select2',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -115,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ni'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Managua'
 
 USE_I18N = True
 
@@ -181,3 +186,65 @@ LOGGING = {
         },
     }
 }
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookAppOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    #'social_core.backends.linkedin.LinkedinOAuth',
+    'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.fedora.FedoraOpenId',
+    'social_core.backends.twitter.TwitterOAuth',
+    #'social_core.backends.google.GoogleOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    #'social_core.backends.google.GoogleOpenId',
+    #'social_core.backends.google.GooglePlusAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_FACEBOOK_KEY = '330034220777751'
+SOCIAL_AUTH_FACEBOOK_SECRET = '5c0e120ff0e04f661e3091f966499354'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.10'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, email'
+}
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '78pcxpvhgsrpnq'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'Nk6HzVrspLgIiB3K'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_basicprofile', 'r_emailaddress']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['picture-url', 'email-address', 'headline', 'industry']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [('id', 'li_id'),
+                               ('firstName', 'first_name'),
+                               ('lastName', 'last_name'),
+                               ('emailAddress', 'email_address'),
+                               ('headline', 'headline'),
+                               ('picture-url', 'picture_url')]
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '415073926025-gb1fqenlff8nmitf1n2osrd1gicho5vp.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '25D83QyKLmNYzk1t4KYVEUfE'
+
+SOCIAL_AUTH_TWITTER_KEY = 'Zxk2lzFUgO3aUhj0cuwmA'
+SOCIAL_AUTH_TWITTER_SECRET = 'zI3VLBtGINAWw6DgpyPBymVTvPwddsub70O7KIgXzg'
+# Google OAuth2 (google-oauth2)
+"""SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile'
+]"""
+
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.social_auth.associate_by_email',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+    'venues.pipelines.get_avatar',
+)
+
+LOGOUT_URL = "/"

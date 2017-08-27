@@ -4,6 +4,13 @@ from __future__ import unicode_literals
 from django.db import models
 from geoposition.fields import GeopositionField
 # Create your models here.
+from waze_poi.settings import AUTH_USER_MODEL
+from django.contrib.auth.models import AbstractUser
+# Create your models here.
+
+
+class User(AbstractUser):
+    avatar = models.URLField(null=True, blank=True)
 
 
 class Category(models.Model):
@@ -21,6 +28,11 @@ class Category(models.Model):
 
 
 class Venue(models.Model):
+    STATUS_CHOICES = (
+        (1, ("Pendiente")),
+        (2, ("Mapeado")),
+        (3, ("Denegado")),
+    )
     name = models.CharField(max_length=100)
     secondary_names = models.TextField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
@@ -42,7 +54,10 @@ class Venue(models.Model):
     delivery = models.BooleanField(blank=True, default=False)
     to_take_away = models.BooleanField(blank=True, default=False)
     wheelchair_access = models.BooleanField(blank=True, default=False)
-    mapped = models.BooleanField(blank=True, default=False)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=1)
+    status_desc = models.TextField(null=True, blank=True)
+    created_by = models.ForeignKey(AUTH_USER_MODEL)
+    mapped_by = models.ForeignKey(AUTH_USER_MODEL, related_name='mapped_by', null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Puntos'

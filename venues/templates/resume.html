@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="ui main container">
+    <div class="ui teal segment">
+        <h4 class="ui dividing header">Resumen</h4>
+        <div class="ui grid">
+
+
+            <div class="ui statistics">
+              <div class="statistic">
+                <div class="value">
+                  {{venues}}
+                </div>
+                <div class="label">
+                  <i class="building icon"></i> Punto(s)
+                </div>
+              </div>
+
+                <div class="statistic">
+                <div class="value">
+                  {{mapped}}
+                </div>
+                <div class="label">
+                  <i class="map icon"></i> Mapeados
+                </div>
+              </div>
+
+                <div class="statistic">
+                <div class="value">
+                  {{users}}
+                </div>
+                <div class="label">
+                  <i class="user icon"></i> Usuarios
+                </div>
+              </div>
+
+                <div class="statistic">
+                <div class="value">
+                  {{editors}}
+                </div>
+                <div class="label">
+                  <i class="id card outline icon"></i> Editores
+                </div>
+              </div>
+
+                <div class="statistic">
+                <div class="value">
+                  {{mapped_by_me}}
+                </div>
+                <div class="label">
+                  <i class="paint brush icon"></i> Mapeados por mi
+                </div>
+              </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

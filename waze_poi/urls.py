@@ -17,13 +17,21 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from waze_poi import settings
 from django.conf.urls.static import static
-from venues.views import Home, CreateVenue, UpdateVenue
+from venues.views import Home, CreateVenue, UpdateVenue, UpdateVenue2, MyVenues, Resume
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^$', Home.as_view()),
+    url(r'^my_venues$', MyVenues.as_view(), name='my_venues'),
+    url(r'^resume', Resume.as_view(), name='resume'),
     url(r'^venue/new$', CreateVenue.as_view(), name='create_venue'),
     url(r'^venue/(?P<pk>[0-9]+)/$', UpdateVenue.as_view(), name='update_venue'),
+    url(r'^my_venue/(?P<pk>[0-9]+)/$', UpdateVenue2.as_view(), name='update_venue2'),
+
     url(r'^admin/', admin.site.urls),
     url(r'^select2/', include('django_select2.urls')),
+    url('', include('social_django.urls', namespace='social')),
+    url('^logout/$', auth_views.logout_then_login, name='logout'),
+
 ]
 
