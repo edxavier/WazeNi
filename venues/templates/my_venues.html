@@ -27,10 +27,10 @@ mapeados en la aplicación.</p>
             </h4>
           <br>
 
-            <a class="ui facebook button" href="{% url 'social:begin' 'facebook' %}"> <i class="facebook icon"></i> Facebook</a>
-            <a class="ui linkedin button" href="{% url 'social:begin' 'linkedin-oauth2' %}"> <i class="linkedin icon"></i> Linkedin</a>
-            <a class="ui twitter button" href="{% url 'social:begin' 'twitter' %}"> <i class="twitter icon"></i> Twitter</a>
-            <a class="ui red button" href="{% url 'social:begin' 'google-oauth2' %}"> <i class="google icon"></i> Google</a>
+            <a style="margin:4px" class="ui facebook button" href="{% url 'social:begin' 'facebook' %}"> <i class="facebook icon"></i> Facebook</a>
+            <a style="margin:4px" class="ui linkedin button" href="{% url 'social:begin' 'linkedin-oauth2' %}"> <i class="linkedin icon"></i> Linkedin</a>
+            <a style="margin:4px" class="ui twitter button" href="{% url 'social:begin' 'twitter' %}"> <i class="twitter icon"></i> Twitter</a>
+            <a style="margin:4px" class="ui red button" href="{% url 'social:begin' 'google-oauth2' %}"> <i class="google icon"></i> Google</a>
 
             <div class="ui warning message">
               <i class="icon info"></i>
@@ -162,14 +162,22 @@ mapeados en la aplicación.</p>
                   <td><i class="edit icon"></i>Creado por</td>
                   <td>
                        <img class="ui avatar bordered image" src="{{venue.created_by.avatar}}">
-                      <span>{{venue.created_by.first_name}} {{venue.created_by.last_name}}</span>
+
+                        <span>{{venue.created_by.first_name}} {{venue.created_by.last_name}}</span>
                   </td>
                 </tr>
             </tbody></table>
 
-          {% if  perms.venues.set_mapped and venue.status == 1 or venue.status == 3 %}
-            <a class="ui blue button" href="{% url 'update_venue' venue.id %}">Actualizar estado</a>
+          {% if  perms.venues.set_mapped %}
+              {% if venue.status == 1 or venue.status == 3  %}
+                <a class="ui green button" style="margin:4px" href="{% url 'update_venue' venue.id %}">Actualizar estado</a>
+              {% endif %}
           {% endif %}
+            {% if venue.created_by.id == user.id %}
+                {% if venue.status == 1 or venue.status == 3  %}
+                <a class="ui teal button" style="margin:4px" href="{% url 'update_venue2' venue.id %}">Actualizar datos</a>
+                {% endif %}
+            {% endif %}
 
        </div>
       {% empty %}
@@ -180,6 +188,7 @@ mapeados en la aplicación.</p>
               No hay registros para mostrar
             </div>
       {% endfor %}
+
 
         <div class="pagination">
                 {% if page_obj.has_previous %}

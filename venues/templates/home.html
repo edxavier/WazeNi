@@ -27,10 +27,10 @@ mapeados en la aplicación.</p>
             </h4>
           <br>
 
-            <a class="ui facebook button" href="{% url 'social:begin' 'facebook' %}"> <i class="facebook icon"></i> Facebook</a>
-            <a class="ui linkedin button" href="{% url 'social:begin' 'linkedin-oauth2' %}"> <i class="linkedin icon"></i> Linkedin</a>
-            <a class="ui twitter button" href="{% url 'social:begin' 'twitter' %}"> <i class="twitter icon"></i> Twitter</a>
-            <a class="ui red button" href="{% url 'social:begin' 'google-oauth2' %}"> <i class="google icon"></i> Google</a>
+            <a style="margin:4px" class="ui facebook button" href="{% url 'social:begin' 'facebook' %}"> <i class="facebook icon"></i> Facebook</a>
+            <a style="margin:4px" class="ui linkedin button" href="{% url 'social:begin' 'linkedin-oauth2' %}"> <i class="linkedin icon"></i> Linkedin</a>
+            <a style="margin:4px" class="ui twitter button" href="{% url 'social:begin' 'twitter' %}"> <i class="twitter icon"></i> Twitter</a>
+            <a style="margin:4px" class="ui red button" href="{% url 'social:begin' 'google-oauth2' %}"> <i class="google icon"></i> Google</a>
 
             <div class="ui warning message">
               <i class="icon info"></i>
@@ -170,12 +170,12 @@ mapeados en la aplicación.</p>
 
           {% if  perms.venues.set_mapped %}
               {% if venue.status == 1 or venue.status == 3  %}
-                <a class="ui green button" href="{% url 'update_venue' venue.id %}">Actualizar estado</a>
+                <a class="ui green button" style="margin:4px" href="{% url 'update_venue' venue.id %}">Actualizar estado</a>
               {% endif %}
           {% endif %}
-            {% if venue.created_by == user %}
+            {% if venue.created_by.id == user.id %}
                 {% if venue.status == 1 or venue.status == 3  %}
-                <a class="ui teal button" href="{% url 'update_venue2' venue.id %}">Actualizar datos</a>
+                <a class="ui teal button" style="margin:4px" href="{% url 'update_venue2' venue.id %}">Actualizar datos</a>
                 {% endif %}
             {% endif %}
 
