@@ -67,9 +67,6 @@
         <img class="logo" src="/static/img/wazeni.png">
         Comunidad Waze Nicaragua
       </a>
-        {% if user.is_authenticated %}
-            <a href="{% url 'my_venues' %}" class="item">Mis lugares</a>
-        {% endif %}
 
         <div class="right menu">
             {% if user.is_authenticated %}
@@ -89,6 +86,7 @@
                             <a href="{% url 'resume' %}" class="item">Resumen</a>
                             <div class="divider"></div>
                         {% endif %}
+                    <a href="{% url 'my_venues' %}" class="item">Mis lugares</a>
                     <a class="item" href="{% url 'logout'  %}?next=/">Salir</a>
                 </div>
               </div>
